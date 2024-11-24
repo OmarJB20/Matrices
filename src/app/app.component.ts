@@ -6,7 +6,7 @@ import { MatrixComponent } from './matriz/matrix.component';
   standalone: true,
   imports: [MatrixComponent],
   template: `
-    <h1>Bienvenido a Matrix </h1>
+    <h1>Bienvenido a Matriz </h1>
     <app-matrix></app-matrix>
   `,
   styleUrls: ['./app.component.css']
