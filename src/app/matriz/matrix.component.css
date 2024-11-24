@@ -1,0 +1,106 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.matrix-title {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #471d1d;
+}
+
+.matrix-container {
+    display: grid;
+    gap: 10px; 
+    padding: 10px;
+    width: 100%;
+}
+
+.cell {
+    background-color: #297e85; 
+    border: 1px solid #3705c0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(19, 185, 46);
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #1b5c1e; 
+}
+
+/* Esquema de colores para las matrices */
+.matrix-3x3 .cell {
+    background-color: #79d67d;
+}
+
+.matrix-4x4 .cell {
+    background-color: #2196f3;
+}
+
+.matrix-5x5 .cell {
+    background-color: #e9973a;
+}
+
+.matrix-6x6 .cell {
+    background-color: #36f465;
+}
+
+/* Matrices responsivas */
+.matrix-3x3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.matrix-4x4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.matrix-5x5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.matrix-6x6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.cell {
+    aspect-ratio: 1; 
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .matrix-container {
+        gap: 5px; 
+    }
+
+    .cell {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .matrix-3x3 {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .matrix-4x4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .matrix-5x5 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .matrix-6x6 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

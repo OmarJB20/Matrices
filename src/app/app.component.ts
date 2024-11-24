@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MatrixComponent } from './matriz/matrix.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [MatrixComponent],
+  template: `
+    <h1>Bienvenido a Matrix </h1>
+    <app-matrix></app-matrix>
+  `,
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'matriz';
-}
+export class AppComponent {}
